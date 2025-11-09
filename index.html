@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Newsletter</title> 
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100 text-slate-900 font-sans">
+
+  <!-- Container -->
+  <div class="max-w-4xl mx-auto p-6 bg-white rounded-xl shadow-lg mt-8">
+
+    <!-- Header -->
+    <header class="text-center mb-8">
+      <h1 class="text-3xl font-bold text-indigo-600">💡 Tech Insights Weekly</h1>
+      <p class="text-slate-500 mt-2">Your weekly dose of technology news, tips, and trends.</p>
+    </header>
+
+    <!-- Featured Article -->
+    <section class="mb-8">
+        <video src="https://www.pexels.com/download/video/3125427/"
+        autoplay 
+        muted 
+        loop 
+        class="w-full h-64 object-cover rounded-lg mb-4"></video>      <h2 class="text-2xl font-semibold mb-2 text-slate-900">The Rise of AI in Everyday Life</h2>
+      <p class="text-slate-700 mb-2">Artificial Intelligence is no longer just a buzzword. From smart assistants to predictive analytics, AI is reshaping how we live and work.</p>
+      <div class="hidden text-slate-600" id="featuredMore">
+        <p>Learn how AI impacts healthcare, finance, education, and entertainment. Explore examples of AI tools, ethical considerations, and how businesses are leveraging AI to gain a competitive edge in 2025.</p>
+      </div>
+      <button onclick="toggleReadMore('featuredMore', this)" 
+              class="mt-2 inline-block px-4 py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600 transition">Read More</button>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="grid gap-6 sm:grid-cols-2">
+      <article class="bg-indigo-50 p-4 rounded-lg shadow-sm hover:shadow-md transition">
+        <h3 class="font-semibold text-lg mb-2 text-slate-900">Blockchain Beyond Cryptocurrency</h3>
+    
+            <video src="https://www.pexels.com/download/video/4406964/"
+            autoplay 
+            muted 
+            loop 
+            class="w-full h-64 object-cover rounded-lg mb-4"></video>
+            <p class="text-slate-700 mb-2">Blockchain is dencentralized digital database.</p> 
+            <div class="hidden text-slate-600" id="article1More"> 
+
+            <p>Discover how blockchain ensures transparency, improves traceability, and introduces smart contracts in real-world applications, beyond just cryptocurrency trading.</p>
+        </div>
+        <button onclick="toggleReadMore('article1More', this)" 
+                class="mt-2 text-indigo-600 hover:underline text-sm">Read More</button>
+      </article>
+
+      <article class="bg-indigo-50 p-4 rounded-lg shadow-sm hover:shadow-md transition">
+        <h3 class="font-semibold text-lg mb-2 text-slate-900">Cybersecurity Tips for Remote Work</h3> 
+        <video src="https://www.pexels.com/download/video/2887463/"
+        autoplay
+        muted
+        loop
+        class="w-full h-64 object-cover rounded-lg mb-4"> </video>
+        
+        </video>
+        <p class="text-slate-700 mb-2">Remote work is here to stay. Protect your data and devices.</p>
+        <div class="hidden text-slate-600" id="article2More">
+          <p>Use VPNs, strong passwords, two-factor authentication, and encrypted communication tools. Avoid public Wi-Fi without protection and regularly update your software to reduce vulnerabilities.</p>
+        </div>
+        <button onclick="toggleReadMore('article2More', this)" 
+                class="mt-2 text-indigo-600 hover:underline text-sm">Read More</button>
+      </article>
+
+      <article class="bg-indigo-50 p-4 rounded-lg shadow-sm hover:shadow-md transition">
+        <h3 class="font-semibold text-lg mb-2 text-slate-900">Top Web Development Trends 2025</h3>
+        <video src="https://www.pexels.com/download/video/1350205/"
+        autoplay
+        muted
+        loop
+        class="w-full h-64 object-cover rounded-lg mb-4"> </video>
+        <p class="text-slate-700 mb-2">Stay ahead of the curve with the latest frameworks and tools.</p>
+        <div class="hidden text-slate-600" id="article3More">
+          <p>Explore AI-driven development, Jamstack, serverless architecture, and modern CSS frameworks. Learn which technologies are gaining traction and how to integrate them effectively into projects.</p>
+        </div>
+        <button onclick="toggleReadMore('article3More', this)" 
+                class="mt-2 text-indigo-600 hover:underline text-sm">Read More</button>
+      </article>
+
+      <article class="bg-indigo-50 p-4 rounded-lg shadow-sm hover:shadow-md transition">
+        <h3 class="font-semibold text-lg mb-2 text-slate-900">AI-Generated Productivity Tools</h3> 
+        <video src="https://www.pexels.com/download/video/30718280/"
+        autoplay
+        muted 
+        loop
+        class="w-full h-64 object-cover rounded-lg mb-4"> </video>
+        <p class="text-slate-700 mb-2">Boost your efficiency with AI tools designed to streamline tasks.</p>
+        <div class="hidden text-slate-600" id="article4More">
+          <p>Automate scheduling, content creation, coding assistance, and data analysis with AI tools. Discover which applications save time and improve accuracy across your daily workflow.</p>
+        </div>
+        <button onclick="toggleReadMore('article4More', this)" 
+                class="mt-2 text-indigo-600 hover:underline text-sm">Read More</button>
+      </article>
+    </section>
+
+    <!-- Subscription CTA -->
+    <section class="mt-8 bg-indigo-100 p-6 rounded-lg text-center">
+      <h2 class="text-xl font-semibold mb-2 text-indigo-700">Stay Updated!</h2>
+      <p class="text-slate-700 mb-4">Subscribe to our newsletter and get the latest tech insights delivered to your inbox.</p>
+      <form class="flex flex-col sm:flex-row justify-center gap-2">
+        <input type="email" placeholder="Enter your email" 
+               class="px-4 py-2 rounded-md border border-indigo-300 flex-1 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+        <button type="submit" class="px-4 py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600 transition">Subscribe</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-8 text-center text-slate-500 text-sm">
+      &copy; 2025 Tech Insights Weekly. All rights reserved.
+    </footer>
+
+  </div>
+
+  <script>
+    function toggleReadMore(id, btn) {
+      const moreText = document.getElementById(id);
+      if (moreText.classList.contains('hidden')) {
+        moreText.classList.remove('hidden');
+        btn.textContent = 'Read Less';
+      } else {
+        moreText.classList.add('hidden');
+        btn.textContent = 'Read More';
+      }
+    }
+  </script>
+
+</body>
+</html>
